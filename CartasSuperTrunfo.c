@@ -11,22 +11,26 @@ int main() {
     ///Dados da Primeira Carta
 
     char Estado1;
-    char Codigo1[2];
+    char Codigo1[3];
     char Cidade1[20];
     int Populacao1;
     float Area1;
     float Pib1;
     int PontosTuristicos1;
+    float DesnsidadePopulacional1;
+    float PibPercapita1;
 
 //Dados da Segunda Carta
 
     char Estado2;
-    char Codigo2[2];
+    char Codigo2[3];
     char Cidade2[20];
     int Populacao2;
     float Area2;
     float Pib2;
     int PontosTuristicos2;
+    float DesnsidadePopulacional2;
+    float PibPercapita2;
 
 //Coleta de Dados da Primeira Carta
 
@@ -50,6 +54,11 @@ int main() {
 
     printf("Digite o número de pontos turisticos da cidade: \n");
     scanf("%d", &PontosTuristicos1);
+
+    //Calculo de Densidade Poupulacional e Pib Per Capita da Primeira Carta
+
+    DesnsidadePopulacional1 = (float)(Populacao1 / Area1);
+    PibPercapita1 = (float)(Pib1 / Populacao1);
     
   //Informações da Primeira Carta na Tela  
     printf("Dados da Primeira carta: \n");
@@ -60,6 +69,8 @@ int main() {
     printf("Área da cidade: %f \n", Area1);
     printf("PIB da cidade: %f \n", Pib1);
     printf("Pontos Turisticos: %d \n", PontosTuristicos1);
+    printf("Densidade populacional: %2f \n", DesnsidadePopulacional1);
+    printf("PIB Per Capita: %2f \n", PibPercapita1);
 
 
     //Coleta de Dados da Segunda Carta
@@ -85,6 +96,11 @@ int main() {
         printf("Digite o número de pontos turisticos da cidade: \n");
         scanf("%d", &PontosTuristicos2);
 
+        //Calculo de Densidade Poupulacional e Pib Per Capita da Segunda Carta
+
+        DesnsidadePopulacional2 = (float)(Populacao2 / Area2);
+        PibPercapita2 = (float)(Pib2 / Populacao2);
+
     //Informações da Segunda Carta na Tela  
     
         printf("Dados da Segunda Carta: \n");
@@ -95,6 +111,9 @@ int main() {
         printf("Área da cidade: %f \n", Area2);
         printf("PIB da cidade: %f \n", Pib2);
         printf("Pontos Turisticos: %d \n", PontosTuristicos2);
+        printf("Densidade populacional: %2f \n", DesnsidadePopulacional2);
+        printf("PIB Per Capita: %2f \n", PibPercapita2);
+    
+        return 0;
 
-    return 0;
 }
